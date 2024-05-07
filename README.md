@@ -50,4 +50,9 @@ We appreciate your input and suggestions! Whether you're a beginner or an experi
 > - __Search Functionality__: Implement search functionality to allow users to search for specific contacts.
 > - __Pagination__: Add pagination to manage large datasets efficiently.
 > - __Import/Export Contacts__: Enable users to import/export contacts to/from CSV files.
-> - __User Authentication and Authorization__: Implement role-based access control for enhanced security.  
+> - __User Authentication and Authorization__: Implement role-based access control for enhanced security.
+
+## Demo:
+  ![contact_img2](https://github.com/avijit18/Smart-Contact-Management-System/assets/78075816/7110fb92-bd0f-48c2-8f4d-aa41c14296e8)
+![contact_img](https://github.com/avijit18/Smart-Contact-Management-System/assets/78075816/9ed41a91-a945-4b44-b3a0-f407e23d9f6c)
+
