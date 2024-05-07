@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Management System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="/">Smart Contact Management</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white" th:href="@{/contacts}">All Contacts</a>
+                </li>
+            </ul>
+
+            <div class="ml-auto">
+            <a th:href="@{/contacts/new_contact}" class="btn btn-outline-success m-2" type="submit">Add New Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+<!--    <a class="navbar-brand" href="#">Smart Contact Management</a>-->
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"-->
+<!--            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--    <div class="collapse navbar-collapse" id="navbarNavDropdown">-->
+<!--        <ul class="navbar-nav">-->
+<!--            <li class="nav-item active">-->
+<!--                <a class="nav-link" th:href="@{/contacts}">All Contacts</a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--        <a th:href="@{/contacts/new_contact}" class="btn btn-success btn-md my-2 my-sm-0">Add Contacts</a>-->
+<!--    </div>-->
+<!--</nav>-->
+<div class="container">
+    <div class="row">
+        <h1>Contact List</h1>
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="Contacts: ${Contacts}">
+            <td th:text="${Contacts.contact_name}"></td>
+            <td th:text="${Contacts.contact_email}"></td>
+            <td th:text="${Contacts.contact_number}"></td>
+            <td th:text="${Contacts.contact_address}"></td>
+            <td>
+                <a th:href="@{/Contacts/edit/{id}(id=${Contacts.contact_id})}" class="btn btn-warning">Update</a>
+                <a th:href="@{/Contacts/{id}(id=${Contacts.contact_id})}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
