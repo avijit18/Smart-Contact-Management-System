@@ -1,4 +1,4 @@
-# Smart-Contact-Management-System
+# Smart Contact Manager 
 
 # Description: 
 The Smart Contact Management System is a comprehensive web-based application designed to streamline the process of managing contacts. It provides an intuitive interface for users to create, store, update, and delete contact information effectively. Built with Spring Boot, Spring MVC, Hibernate, and MySQL, this system offers a robust backend solution with seamless integration of frontend technologies like Thymeleaf.
